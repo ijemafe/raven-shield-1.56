@@ -1,0 +1,78 @@
+//================================================================================
+// R6HBSGadget.
+//================================================================================
+
+class R6HBSGadget extends R6Gadget
+	Native;
+
+var bool m_bHeartBeatOn;
+var Sound m_sndActivation;
+var Sound m_sndDesactivation;
+
+replication
+{
+}
+
+native(2700) final function ToggleHeartBeatProperties (bool bTurnItOn);
+
+simulated event bool IsGoggles ()
+{
+	return True;
+}
+
+function ServerToggleHeartBeatProperties (bool bActiveHeartBeat)
+{
+}
+
+function Fire (float fValue)
+{
+}
+
+function StopFire (optional bool bSoundOnly)
+{
+}
+
+function AltFire (float fValue)
+{
+}
+
+function StopAltFire ()
+{
+}
+
+function DisplayHeartBeat (bool bActivateHeartBeat)
+{
+}
+
+simulated function RemoveFirstPersonWeapon ()
+{
+	return True;
+}
+
+simulated function DisableWeaponOrGadget ()
+{
+}
+
+state PutWeaponDown 
+{
+}
+
+state BringWeaponUp 
+{
+}
+
+state RaiseWeapon
+{
+}
+
+state DiscardWeapon
+{
+}
+
+function StartLoopingAnims ()
+{
+}
+
+defaultproperties
+{
+}

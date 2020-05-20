@@ -1,0 +1,129 @@
+//================================================================================
+// R6Grenade.
+//================================================================================
+
+class R6Grenade extends R6Bullet
+	Native
+	Abstract;
+
+struct sDamagePercentage
+{
+	var() float fHead;
+	var() float fBody;
+	var() float fArms;
+	var() float fLegs;
+};
+
+enum eGrenadeBoneTarget {
+	GBT_Head,
+	GBT_Body,
+	GBT_LeftArm,
+	GBT_RightArm,
+	GBT_LeftLeg,
+	GBT_RightLeg
+};
+
+enum eGrenadePawnPose {
+	GPP_Stand,
+	GPP_Crouch,
+	GPP_ProneFacing
+};
+
+var EPhysics m_eOldPhysic;
+var ESoundType m_eExplosionSoundType;
+var EGrenadeType m_eGrenadeType;
+var() int m_iNumberOfFragments;
+var bool m_bFirstImpact;
+var bool m_bDestroyedByImpact;
+var float m_fDuration;
+var float m_fShakeRadius;
+var float m_fEffectiveOutsideKillRadius;
+var(R6GrenadeSound) Sound m_sndExplosionSound;
+var(R6GrenadeSound) Sound m_sndExplosionSoundStop;
+var(R6GrenadeSound) Sound m_sndExplodeMetal;
+var(R6GrenadeSound) Sound m_sndExplodeWater;
+var(R6GrenadeSound) Sound m_sndExplodeAir;
+var(R6GrenadeSound) Sound m_sndExplodeDirt;
+var(R6GrenadeSound) Sound m_ImpactSound;
+var(R6GrenadeSound) Sound m_ImpactGroundSound;
+var(R6GrenadeSound) Sound m_ImpactWaterSound;
+var(R6GrenadeSound) Sound m_sndEarthQuake;
+var R6DemolitionsGadget m_Weapon;
+var() Emitter m_pEmmiter;
+var() Class<Emitter> m_pExplosionParticles;
+var() Class<Emitter> m_pExplosionParticlesLOW;
+var() Class<Light> m_pExplosionLight;
+var Class<R6GrenadeDecal> m_GrenadeDecalClass;
+var() sDamagePercentage m_DmgPercentStand;
+var() sDamagePercentage m_DmgPercentCrouch;
+var() sDamagePercentage m_DmgPercentProne;
+
+simulated function Class<Emitter> GetGrenadeEmitter ()
+{
+}
+
+function SelfDestroy ()
+{
+}
+
+function PostBeginPlay ()
+{
+}
+
+function Activate ()
+{
+}
+
+event Timer ()
+{
+}
+
+simulated event Destroyed ()
+{
+}
+
+simulated function FirstPassReset ()
+{
+}
+
+simulated function Explode ()
+{
+}
+
+function HitWall (Vector HitNormal, Actor Wall);
+
+simulated function Landed (Vector HitNormal)
+{
+}
+
+singular simulated function Touch (Actor Other)
+{
+}
+
+simulated function ProcessTouch (Actor Other, Vector vHitLocation)
+{
+}
+
+function float GetLocalizedDamagePercentage (eGrenadePawnPose ePawnPose, eGrenadeBoneTarget eBoneTarget)
+{
+	return 0.0;
+}
+
+function eGrenadeBoneTarget HitRandomBodyPart (eGrenadePawnPose ePawnPose)
+{
+	return 0;
+}
+
+function eGrenadePawnPose GetPawnPose (R6Pawn aPawn)
+{
+	local eGrenadePawnPose aa;
+	return aa;
+}
+
+function HurtPawns ()
+{
+}
+
+defaultproperties
+{
+}

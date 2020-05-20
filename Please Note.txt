@@ -1,0 +1,9 @@
+Please note:
+
+This folder contains the complete beta source code for Raven Shield version 1.56.
+I would have included the 1.6 source code, except nobody has it ;)
+
+Credits for this must go to:
+UBI (for making it)
+Two-Six (for the original leak)
+EagleAR, C6, and Vadim (for getting it to the community)
